@@ -166,6 +166,56 @@ The dataset contains host-level behavioral data, including features such as:
 - matplotlib or seaborn
 
 ## Run Example
+# Host Behavior Profiling using KMeans Clustering
+
+## Overview
+
+This project applies KMeans clustering to analyze host behavior data in a network. The goal is to profile different types of host activity and detect groups of similar behavior. This technique can help identify typical usage patterns, as well as potentially unusual activity.
+
+## What is KMeans Clustering
+
+KMeans is an unsupervised machine learning algorithm used to group data into K distinct clusters based on feature similarity. It works by assigning each data point to the cluster with the nearest centroid and then updating the centroids iteratively.
+
+## Why Use KMeans for Host Profiling
+
+- Helps group hosts with similar network behavior
+- Identifies clusters that may correspond to normal, suspicious, or misconfigured behavior
+- Simple and fast to apply to large datasets
+
+## Dataset
+
+The dataset contains host-level behavioral data, including features such as:
+
+- Total connections made
+- Number of distinct IPs accessed
+- Amount of data sent and received
+- Most used ports
+- Activity time patterns
+
+## Methodology
+
+1. Preprocess the data (normalize features)
+2. Choose the number of clusters using the Elbow method
+3. Apply KMeans clustering
+4. Analyze the characteristics of each cluster
+5. Identify any unusual or interesting clusters
+
+## Example Results
+
+- Cluster 0: Normal users with average connections and data usage
+- Cluster 1: High-traffic servers with large data transfers
+- Cluster 2: Hosts with irregular patterns, possibly suspicious
+
+## Requirements
+
+- Python 3
+- pandas
+- scikit-learn
+- matplotlib or seaborn
+
+## Run Example
+
+
 
 
 
