@@ -59,66 +59,7 @@ A spike from 500 to 5000 visitors in one day is detected as an anomaly in a webs
   
 
 
-# 2 Host Behavior Profiling using DBSCAN Clustering
-
-## Overview
-
-Host behavior profiling is the process of analyzing the activity patterns of computers (hosts) in a network. The goal is to identify what constitutes normal behavior and to detect any hosts that behave suspiciously or abnormally. This technique is often used in network security to detect potential threats such as malware, insider attacks, or misconfigured machines.
-
-## What is DBSCAN
-
-DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is a clustering algorithm that groups data based on density. It identifies areas where data points are closely packed together and marks isolated points as outliers or noise. This makes it suitable for identifying abnormal behaviors in a network.
-
-## Why Use DBSCAN for Host Profiling
-
-- Does not require the number of clusters to be specified in advance
-- Can detect outliers, which may indicate suspicious hosts
-- Handles noise and irregular data well
-- Works with non-linear patterns
-
-## How It Works
-
-1. Collect behavioral features for each host such as:
-   - Number of connections
-   - Bytes sent and received
-   - Ports or services accessed
-   - Time of activity
-
-2. Standardize the feature values so that all dimensions contribute equally.
-
-3. Apply DBSCAN clustering with two main parameters:
-   - eps: The maximum distance between two points to be considered neighbors
-   - min_samples: The minimum number of neighbors required to form a dense region
-
-4. Interpret the clustering result:
-   - Hosts that fall into a cluster share similar behavior and are considered normal
-   - Hosts labeled as -1 are considered anomalies and may require further investigation
-
-## Example Use Case
-
-Consider a network with 100 hosts. Most of them access common services during office hours and show similar traffic patterns. However, a few hosts send large amounts of data at midnight or access unknown IP addresses.
-
-Using DBSCAN:
-- The normal hosts will be grouped into clusters
-- The suspicious hosts will be flagged as noise or outliers
-
-## Summary Table
-
-| Step               | Description                                      |
-|--------------------|--------------------------------------------------|
-| Data Collection    | Capture behavioral metrics from each host        |
-| Preprocessing      | Normalize or scale the data                      |
-| Clustering         | Apply DBSCAN to group similar hosts              |
-| Result Analysis    | Identify outliers as suspicious or abnormal hosts|
-
-## Requirements
-
-- Python 3
-- pandas
-- scikit-learn
-- matplotlib or seaborn (for visualization)
-
-# Host Behavior Profiling using KMeans Clustering
+# 2 Host Behavior Profiling using KMeans Clustering
 
 ## Overview
 
@@ -214,6 +155,73 @@ The dataset contains host-level behavioral data, including features such as:
 - matplotlib or seaborn
 
 ## Run Example
+
+# Time Series Modeling
+
+## Overview
+
+Time series modeling is used to analyze data points collected or recorded at specific time intervals. The goal is to understand patterns such as trend and seasonality, and to make forecasts about future values. Time series modeling is widely used in finance, economics, environmental studies, and network monitoring.
+
+## What is Time Series Data
+
+Time series data is a sequence of observations collected over time, typically ordered by date or timestamp. Examples include:
+
+- Daily stock prices
+- Hourly temperature readings
+- Monthly sales numbers
+- Network traffic logs
+
+## Why Use Time Series Modeling
+
+- Identify long-term trends
+- Detect seasonal or cyclic patterns
+- Forecast future values
+- Detect anomalies or unusual behavior
+
+## Common Techniques
+
+1. **Moving Average and Rolling Statistics**  
+   Used to smooth out short-term fluctuations and highlight longer-term trends.
+
+2. **ARIMA (AutoRegressive Integrated Moving Average)**  
+   A widely used model for time series forecasting that accounts for trend and seasonality.
+
+3. **Exponential Smoothing**  
+   Assigns more weight to recent observations while still considering past data.
+
+4. **Seasonal Decomposition**  
+   Separates the data into trend, seasonality, and residual components.
+
+5. **LSTM and Deep Learning Models**  
+   Neural networks for more complex, non-linear time series forecasting.
+
+## Methodology
+
+1. Collect and clean time series data
+2. Visualize the data to check for trends and seasonality
+3. Stationarize the data if needed (using differencing or transformations)
+4. Fit an appropriate model (e.g., ARIMA, Prophet, LSTM)
+5. Validate the model using train-test splits
+6. Forecast future values and analyze accuracy
+
+## Example Applications
+
+- Forecasting future stock or cryptocurrency prices
+- Predicting website traffic
+- Estimating energy consumption
+- Monitoring network performance for anomalies
+
+## Requirements
+
+- Python 3
+- pandas
+- statsmodels
+- matplotlib or seaborn
+- scikit-learn
+- (Optional) prophet or tensorflow/keras for advanced models
+
+## Run Example
+
 
 
 
