@@ -176,7 +176,6 @@ Time series data is a sequence of observations collected over time, typically or
 ## Run Example
 
 #3 Lifecycle Analysis Using Temporal Analysis
-# Temporal Analysis
 
 ## Overview
 Temporal analysis studies changes in data over time. It helps identify trends, patterns, seasonality, and anomalies during different phases of a lifecycle.
