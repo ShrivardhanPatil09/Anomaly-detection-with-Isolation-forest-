@@ -175,7 +175,76 @@ Time series data is a sequence of observations collected over time, typically or
 
 ## Run Example
 
+#3 Lifecycle Analysis Using Temporal Analysis
+# Temporal Analysis
 
+## Overview
+Temporal analysis studies changes in data over time. It helps identify trends, patterns, seasonality, and anomalies during different phases of a lifecycle.
+
+## Why Use Temporal Analysis
+- Detect performance trends in lifecycle stages
+- Forecast future usage or impact
+- Identify anomalies in time-based data
+- Compare short-term vs long-term behaviors
+
+## Methodology
+1. Collect time-stamped lifecycle data  
+2. Visualize data to identify seasonality or trends  
+3. Apply time series methods such as:  
+   - Rolling averages  
+   - Decomposition (trend, seasonality, residual)  
+   - Forecasting models (ARIMA, Prophet, LSTM)  
+4. Interpret results to improve lifecycle decision-making  
+
+## Example Applications
+- Monitoring electricity use of machines over years
+- Analyzing customer adoption over product lifespan
+- Studying CO2 emissions trends across supply chains
+
+## Requirements
+- Python 3
+- pandas
+- statsmodels
+- matplotlib or seaborn
+- scikit-learn
+
+# Survival Analysis
+
+## Overview
+Survival Analysis is a statistical technique for analyzing the expected duration of time until an event occurs. In lifecycle analysis, it helps estimate product lifetimes, customer churn, or failure risks.
+
+## Key Concepts
+- **Survival Function (S(t))**: Probability that an item survives beyond time t  
+- **Hazard Function (h(t))**: Risk of failure at time t given survival until that point  
+- **Censoring**: Handling incomplete data where some items have not yet failed  
+
+## Why Use Survival Analysis
+- Estimate the average lifespan of products
+- Model risk of failure or churn over time
+- Handle incomplete lifecycle observations
+- Support warranty, maintenance, and reliability studies
+
+## Methodology
+1. Collect data on usage duration or failure times  
+2. Handle censoring (e.g., items still active at study end)  
+3. Apply models such as:  
+   - Kaplan-Meier estimator  
+   - Cox Proportional Hazards model  
+   - Parametric survival models (Exponential, Weibull)  
+4. Interpret survival probabilities and hazard risks  
+
+## Example Applications
+- Estimating machine part failure times
+- Modeling customer churn rates
+- Measuring patient survival in clinical studies
+- Predicting IT system reliability
+
+## Requirements
+- Python 3
+- pandas
+- lifelines
+- matplotlib or seaborn
+- scikit-learn
 
 
 
